@@ -4,5 +4,25 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="script.js"></script>
-
-Hello world!
+    <body>
+        <div ng-app = 'script' ng-controller = 'mainCtrl'>
+            <h2>Welcome to Song Search</h2>
+        
+    
+        Enter a known artist with their song.
+        <form name="form" ng-submit= 'songlyrics(form)'>
+            <input placeholder = "Song Artist" type = "text" ng-model = "form.artist">
+            <input placeholder = "Song Title" type = "text" ng-model = "form.title">
+            <button type= 'submit'>Add Song</button>
+        </form>
+        </div>
+        
+        <ul class = "Song Lyrics">
+        <li ng-repeat = 'song in songs'>
+            <div class = "Lyrics">
+                {{song.lyrics}}
+            </div>
+            <!--<output song = 'song'>!-->
+        </li>
+        </ul>
+    </body>
