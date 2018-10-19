@@ -5,10 +5,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="script.js"></script>
 
+<h2>Welcome to Song Search</h2>
+
 <div ng-app="lyricsLookup" ng-controller="mainCtrl">
 	<form name="songInfo" ng-submit="getLyrics(songInfo)">
 		<input type="text" placeholder="Artist" ng-model="songInfo.artist" ng-init="songInfo.artist = 'Coldplay'" />
-		<input type="text" placeholder="Song" ng-model="songInfo.song" ng-init="songInfo.song = 'Adventure of a Lifetime'" /></input>
+		<input type="text" placeholder="Song" ng-model="songInfo.title" ng-init="songInfo.title = 'Adventure of a Lifetime'" /></input>
 		<button type="submit">Submit</button>
 	</form>
 	{{lyrics}}

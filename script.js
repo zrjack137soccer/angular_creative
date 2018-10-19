@@ -1,3 +1,4 @@
+
 /* global angular */
 
 angular.module('lyricsLookup', [])
@@ -6,7 +7,7 @@ angular.module('lyricsLookup', [])
 		function ($scope, $http) {
 
 			$scope.getLyrics = function (info) {
-        let url = `https://api.lyrics.ovh/v1/${info.artist}/${info.song}`;
+        let url = `https://api.lyrics.ovh/v1/${info.artist}/${info.title}`;
         $http.get(url).then(
           function successCallback(response) {
             console.log(response);
