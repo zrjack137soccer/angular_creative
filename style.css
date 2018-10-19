@@ -1,0 +1,33 @@
+button {
+  border-color: #B3B6B7;
+  border-style: outset;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:active {
+  border-style: inset;
+}
+.lyrics {
+  white-space: pre-line;
+  border-style: dashed;
+}
+
+.title {
+
+  background-image:url('https://isadorablogs.files.wordpress.com/2016/07/music-notes-background.jpg');
+  background-size:cover;
+  font-family:'Sofia';
+  border-bottom-style:dashed;
+}
+
+.titleWords {
+  display: inline-block;
+  background-color: #B3B6B7;
+  border-radius: 8%;
+}

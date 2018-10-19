@@ -1,10 +1,10 @@
-
 /* global angular */
 
 angular.module('lyricsLookup', [])
   .controller(
 		'mainCtrl',
 		function ($scope, $http) {
+      $scope.lyrics = "Please search using an artist and title";
 
 			$scope.getLyrics = function (info) {
         let url = `https://api.lyrics.ovh/v1/${info.artist}/${info.title}`;
@@ -15,6 +15,7 @@ angular.module('lyricsLookup', [])
           },
           function errorCallback(response) {
             console.log(response);
+            $scope.lyrics = "Lyrics not found!";
           },
         );
 			};
